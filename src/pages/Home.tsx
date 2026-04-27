@@ -1,5 +1,5 @@
 import { Music, Heart, Star, ChevronLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
 const songs = [
@@ -20,9 +20,6 @@ const stats = [
 export default function Home() {
   return (
     <>
-      <title>صوت أم كلثوم | كوكب الشرق</title>
-      <meta name="description" content="موقع تخليد ذكرى أم كلثوم - سيرة حياتها ومسيرتها الفنية وإرثها الموسيقي العظيم" />
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10" />
@@ -31,30 +28,24 @@ export default function Home() {
           style={{ backgroundImage: "url('https://images.pexels.com/photos/7087168/pexels-photo-7087168.jpeg?auto=format&fit=crop&w=1920&q=80')" }}
         />
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto" dir="rtl">
-          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6 animate-on-scroll fade-up visible">
+          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6">
             كوكب الشرق
           </p>
-          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground animate-on-scroll fade-up visible">
+          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground">
             أم كلثوم
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans animate-on-scroll fade-up visible">
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
             صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4 animate-on-scroll fade-up visible">
-            <Link
-              to="/about"
-              className="inline-flex items-center justify-center px-8 py-4 text-base bg-primary text-primary-foreground rounded-[10px] font-medium hover:opacity-90 transition-opacity min-h-[44px]"
-            >
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Button to="/about" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               اكتشف حياتها
-            </Link>
-            <Link
-              to="/legacy"
-              className="inline-flex items-center justify-center px-8 py-4 text-base border border-border bg-transparent text-foreground rounded-[10px] font-medium hover:bg-secondary transition-colors min-h-[44px]"
-            >
+            </Button>
+            <Button to="/legacy" variant="outline" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               إرثها الموسيقي
-            </Link>
+            </Button>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
@@ -70,7 +61,7 @@ export default function Home() {
           <AnimatedSection type="scaleIn">
             <div className="border border-border/50 rounded-2xl p-8 md:p-12 bg-secondary/20 backdrop-blur-sm text-center">
               <blockquote className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-relaxed text-foreground">
-                &ldquo;إنني لا أغني إلا ما يُؤثر فيني أولاً&rdquo;
+                "إنني لا أغني إلا ما يُؤثر فيني أولاً"
               </blockquote>
               <p className="mt-6 text-muted-foreground font-sans text-lg">— أم كلثوم</p>
             </div>
@@ -139,13 +130,10 @@ export default function Home() {
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto font-sans">
               غوص في تفاصيل حياة كوكب الشرق من طفولتها البسيطة في قرية طماي الزهايرة حتى قمة الشهرة
             </p>
-            <Link
-              to="/about"
-              className="inline-flex items-center justify-center px-8 py-4 text-base bg-primary text-primary-foreground rounded-[10px] font-medium hover:opacity-90 transition-opacity min-h-[44px]"
-            >
+            <Button to="/about" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               اقرأ سيرتها الكاملة
-            </Link>
+            </Button>
           </AnimatedSection>
         </div>
       </section>
