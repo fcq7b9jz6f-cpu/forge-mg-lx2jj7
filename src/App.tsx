@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
@@ -10,6 +11,7 @@ const Gallery = lazy(() => import("@/pages/Gallery"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 export default function App() {
+  useScrollAnimation();
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Navbar />

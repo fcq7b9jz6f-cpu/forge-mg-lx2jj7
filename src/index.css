@@ -38,3 +38,40 @@
     color: hsl(var(--foreground));
   }
 }
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-on-scroll.slide-from-right {
+    transform: translateX(80px);
+  }
+
+  .animate-on-scroll.slide-from-right.visible {
+    transform: translateX(0);
+  }
+
+  .animate-on-scroll.slide-from-left {
+    transform: translateX(-80px);
+  }
+
+  .animate-on-scroll.slide-from-left.visible {
+    transform: translateX(0);
+  }
+
+  .animate-on-scroll.scale-in {
+    transform: scale(0.9);
+  }
+
+  .animate-on-scroll.scale-in.visible {
+    transform: scale(1);
+  }
+}
