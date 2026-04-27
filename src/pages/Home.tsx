@@ -20,7 +20,6 @@ const stats = [
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10" />
         <div
@@ -31,13 +30,13 @@ export default function Home() {
           <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6 animate-on-scroll fade-up">
             كوكب الشرق
           </p>
-          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground animate-on-scroll fade-up">
+          <h1 className="animate-on-scroll fade-up font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground">
             أم كلثوم
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans animate-on-scroll fade-up">
+          <p className="animate-on-scroll fade-up mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
             صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4 animate-on-scroll fade-up">
+          <div className="animate-on-scroll fade-up mt-10 flex flex-wrap justify-center gap-4">
             <Button to="/about" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               اكتشف حياتها
@@ -55,13 +54,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Section */}
       <section className="py-24 md:py-32 px-4" dir="rtl">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection type="scaleIn">
             <div className="border border-border/50 rounded-2xl p-8 md:p-12 bg-secondary/20 backdrop-blur-sm text-center">
               <blockquote className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-relaxed text-foreground">
-                "إنني لا أغني إلا ما يُؤثر فيني أولاً"
+                &quot;إنني لا أغني إلا ما يُؤثر فيني أولاً&quot;
               </blockquote>
               <p className="mt-6 text-muted-foreground font-sans text-lg">— أم كلثوم</p>
             </div>
@@ -69,7 +67,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20 px-4" dir="rtl">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -84,7 +81,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Famous Songs Section */}
       <section className="py-24 md:py-32 px-4" dir="rtl">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection type="fadeUp" className="text-center mb-16">
@@ -120,7 +116,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24 px-4" dir="rtl">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection type="fadeUp">
