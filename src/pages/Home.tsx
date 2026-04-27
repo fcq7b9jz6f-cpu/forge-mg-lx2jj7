@@ -20,6 +20,9 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <title>صوت أم كلثوم | كوكب الشرق</title>
+      <meta name="description" content="موقع تخليد ذكرى أم كلثوم - سيرة حياتها ومسيرتها الفنية وإرثها الموسيقي العظيم" />
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10" />
         <div
@@ -27,16 +30,16 @@ export default function Home() {
           style={{ backgroundImage: "url('https://images.pexels.com/photos/7087168/pexels-photo-7087168.jpeg?auto=format&fit=crop&w=1920&q=80')" }}
         />
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto" dir="rtl">
-          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6 animate-on-scroll fade-up">
+          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6">
             كوكب الشرق
           </p>
-          <h1 className="animate-on-scroll fade-up font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground">
+          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground">
             أم كلثوم
           </h1>
-          <p className="animate-on-scroll fade-up mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
             صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
           </p>
-          <div className="animate-on-scroll fade-up mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button to="/about" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               اكتشف حياتها
@@ -59,7 +62,7 @@ export default function Home() {
           <AnimatedSection type="scaleIn">
             <div className="border border-border/50 rounded-2xl p-8 md:p-12 bg-secondary/20 backdrop-blur-sm text-center">
               <blockquote className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold leading-relaxed text-foreground">
-                &quot;إنني لا أغني إلا ما يُؤثر فيني أولاً&quot;
+                "إنني لا أغني إلا ما يُؤثر فيني أولاً"
               </blockquote>
               <p className="mt-6 text-muted-foreground font-sans text-lg">— أم كلثوم</p>
             </div>
