@@ -1,21 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
 import { Music, Heart, Star, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] } },
-};
 
 const songs = [
   { title: "ألف ليلة وليلة", year: "1969", length: "38 دقيقة" },
@@ -35,10 +20,8 @@ const stats = [
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>صوت أم كلثوم | كوكب الشرق</title>
-        <meta name="description" content="موقع تخليد ذكرى أم كلثوم - سيرة حياتها ومسيرتها الفنية وإرثها الموسيقي العظيم" />
-      </Helmet>
+      <title>صوت أم كلثوم | كوكب الشرق</title>
+      <meta name="description" content="موقع تخليد ذكرى أم كلثوم - سيرة حياتها ومسيرتها الفنية وإرثها الموسيقي العظيم" />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -48,40 +31,31 @@ export default function Home() {
           style={{ backgroundImage: "url('https://images.pexels.com/photos/7087168/pexels-photo-7087168.jpeg?auto=format&fit=crop&w=1920&q=80')" }}
         />
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto" dir="rtl">
-          <motion.div variants={containerVariants} initial="hidden" animate="visible">
-            <motion.p variants={itemVariants} className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6">
-              كوكب الشرق
-            </motion.p>
-            <motion.h1
-              variants={itemVariants}
-              className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground"
-            >
-              أم كلثوم
-            </motion.h1>
-            <motion.p variants={itemVariants} className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
-              صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
-            </motion.p>
-            <motion.div variants={itemVariants} className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button to="/about" size="lg">
-                <ChevronLeft size={18} className="ml-2" />
-                اكتشف حياتها
-              </Button>
-              <Button to="/legacy" variant="outline" size="lg">
-                <ChevronLeft size={18} className="ml-2" />
-                إرثها الموسيقي
-              </Button>
-            </motion.div>
-          </motion.div>
+          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6 animate-on-scroll fade-up">
+            كوكب الشرق
+          </p>
+          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground animate-on-scroll fade-up">
+            أم كلثوم
+          </h1>
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans animate-on-scroll fade-up">
+            صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4 animate-on-scroll fade-up">
+            <Button to="/about" size="lg">
+              <ChevronLeft size={18} className="ml-2" />
+              اكتشف حياتها
+            </Button>
+            <Button to="/legacy" variant="outline" size="lg">
+              <ChevronLeft size={18} className="ml-2" />
+              إرثها الموسيقي
+            </Button>
+          </div>
         </div>
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-muted-foreground/40 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-2 bg-muted-foreground/60 rounded-full" />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Quote Section */}
@@ -101,7 +75,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-20 px-4" dir="rtl">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection type="stagger" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stats.map((stat) => (
               <AnimatedSection key={stat.label} type="scaleIn" className="border border-border/50 rounded-2xl p-8 text-center bg-secondary/10 hover:bg-secondary/20 transition-colors">
                 <stat.icon className="w-8 h-8 text-primary mx-auto mb-4" />
@@ -109,7 +83,7 @@ export default function Home() {
                 <p className="mt-2 text-muted-foreground font-sans">{stat.label}</p>
               </AnimatedSection>
             ))}
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 

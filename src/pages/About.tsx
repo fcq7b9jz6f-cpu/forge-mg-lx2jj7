@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { ChevronLeft, MapPin, Calendar, Mic2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";

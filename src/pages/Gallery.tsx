@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { ChevronLeft, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
