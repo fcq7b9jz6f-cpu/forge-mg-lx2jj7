@@ -28,16 +28,16 @@ export default function Home() {
           style={{ backgroundImage: "url('https://images.pexels.com/photos/7087168/pexels-photo-7087168.jpeg?auto=format&fit=crop&w=1920&q=80')" }}
         />
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto" dir="rtl">
-          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6">
+          <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-6 animate-on-scroll fade-up">
             كوكب الشرق
           </p>
-          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground">
+          <h1 className="font-heading text-7xl md:text-9xl lg:text-[11rem] font-bold leading-[0.9] tracking-[-0.04em] text-foreground animate-on-scroll fade-up">
             أم كلثوم
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-sans animate-on-scroll fade-up">
             صوتٌ يملأ السماء، حكايةٌ لا تنتهي. من ربوع الدلتا إلى قلب كل عربي، رحلة عظيمة في خمسين عاماً من الفن.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4 animate-on-scroll fade-up">
             <Button to="/about" size="lg">
               <ChevronLeft size={18} className="ml-2" />
               اكتشف حياتها
