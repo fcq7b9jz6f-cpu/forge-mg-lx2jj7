@@ -1,5 +1,6 @@
 {
   "name": "umm-kulthum",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,30 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "framer-motion": "^11.11.0",
-    "lucide-react": "^0.451.0",
-    "react-helmet-async": "2.0.5",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.5.4",
-    "class-variance-authority": "^0.7.0",
-    "react-hook-form": "^7.53.0",
-    "@hookform/resolvers": "^3.9.0",
-    "zod": "^3.23.8",
-    "recharts": "^2.13.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.28.0",
+    "framer-motion": "11.11.17",
+    "lucide-react": "0.462.0",
+    "react-helmet-async": "2.0.5"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react": "4.3.3",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "@vitejs/plugin-react-swc": "^3.7.1"
-  },
-  "version": "1.0.0"
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.15",
+    "typescript": "5.6.3",
+    "vite": "6.0.1"
+  }
 }
